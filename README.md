@@ -1,65 +1,86 @@
 # MicroWebServer-Lab
 
-Proyecto de laboratorio para construir un micro servidor web en Java con un mini framework IoC basado en anotaciones.
+Laboratory project to build a micro web server in Java with a mini IoC (Inversion of Control) framework based on annotations.
 
-## Requisitos
+---
+
+## Project Information
+
+**Author:** Nicole Dayan Calderón Arevalo  
+**Course:** Digital Transformation and Business Solutions **University:** Escuela Colombiana de Ingeniería Julio Garavito
+
+---
+
+## Requirements
 
 - Java 17+
 - Maven 3.9+
 
-## Estructura Maven
+## Project Structure
 
-El proyecto sigue la estructura estandar:
+The project follows the standard Maven structure:
 
-- `src/main/java`: codigo fuente del servidor y framework.
-- `src/main/resources`: recursos estaticos (HTML/PNG).
-- `src/test/java`: pruebas unitarias.
+- `src/main/java`: source code for the server and framework.
+- `src/main/resources`: static resources (HTML/PNG).
+- `src/test/java`: unit tests.
 
-## Compilar y probar
+## Compile and Test
 
 ```bash
 mvn clean test
 ```
 
-## Empaquetar
+## Package
 
 ```bash
 mvn clean package
 ```
 
-El artefacto generado queda en `target/`.
+The generated artifact is located in `target/`.
 
-## Ejecutar la aplicacion
+## Running the Application
 
-### Opcion 1: Descubrimiento automatico de controladores
+### Option 1: Automatic Controller Discovery
 
 ```bash
 mvn exec:java -Dexec.mainClass=co.edu.escuelaing.reflexionlab.MicroSpringBoot
 ```
 
-### Opcion 2: Cargar controlador por linea de comandos
+### Option 2: Load Controller via Command Line
 
 ```bash
 mvn exec:java -Dexec.mainClass=co.edu.escuelaing.reflexionlab.MicroSpringBoot -Dexec.args="co.edu.escuelaing.reflexionlab.examples.GreetingController"
 ```
 
-## Endpoints de ejemplo
+## Example Endpoints
 
-- `GET /` retorna un mensaje desde `GreetingController`.
-- `GET /greeting` retorna `Hola World`.
-- `GET /greeting?name=Nicole` retorna `Hola Nicole`.
+- `GET /` returns a message from `GreetingController`.
+- `GET /greeting` returns `Hola World`.
+- `GET /greeting?name=Nicole` returns `Hola Nicole`.
 
-## Contenido estatico
+## Static Content
 
-El servidor resuelve archivos desde `src/main/resources/public`.
+The server serves files from `src/main/resources/public`.
 
-- `GET /index.html`.
-- Soporte para `.html` y `.png`.
+- `GET /index.html`
+- Support for `.html` and `.png` files.
 
-## Alcance implementado
+## Implemented Features
 
-- `@RestController` para identificar componentes web.
-- `@GetMapping` para mapear servicios HTTP GET.
-- `@RequestParam` para extraer parametros query.
-- Descubrimiento por classpath (paquete raiz) o carga explicita por argumento.
-- Manejo secuencial de multiples solicitudes (no concurrente).
+- `@RestController` annotation to identify web components.
+- `@GetMapping` annotation to map HTTP GET services.
+- `@RequestParam` annotation to extract query parameters.
+- Classpath discovery (root package) or explicit loading via command-line argument.
+- Sequential handling of multiple requests (non-concurrent).
+
+---
+
+## AWS Deployment Evidence
+
+![alt text](<WhatsApp Image 2026-03-09 at 10.04.17 PM.jpeg>)
+
+![alt text](<WhatsApp Image 2026-03-09 at 10.05.40 PM.jpeg>)
+
+![alt text](<WhatsApp Image 2026-03-09 at 10.05.40 PM-1.jpeg>)
+
+---
