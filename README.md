@@ -47,7 +47,7 @@ mvn exec:java -Dexec.mainClass=co.edu.escuelaing.reflexionlab.MicroSpringBoot -D
 
 - `GET /` retorna un mensaje desde `GreetingController`.
 - `GET /greeting` retorna `Hola World`.
-- `GET /greeting?name=Seb` retorna `Hola Seb`.
+- `GET /greeting?name=Nicole` retorna `Hola Nicole`.
 
 ## Contenido estatico
 

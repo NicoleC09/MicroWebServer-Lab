@@ -11,7 +11,7 @@ class HttpRequestParserTest {
 
     @Test
     void shouldParsePathAndQueryParams() throws Exception {
-        String rawRequest = "GET /greeting?name=Seb&lang=es HTTP/1.1\r\n"
+        String rawRequest = "GET /greeting?name=Nicole&lang=es HTTP/1.1\r\n"
                 + "Host: localhost\r\n"
                 + "Connection: close\r\n\r\n";
 
@@ -20,7 +20,7 @@ class HttpRequestParserTest {
 
         assertEquals("GET", request.method());
         assertEquals("/greeting", request.path());
-        assertEquals("Seb", request.queryParams().get("name"));
+        assertEquals("Nicole", request.queryParams().get("name"));
         assertEquals("es", request.queryParams().get("lang"));
     }
 }

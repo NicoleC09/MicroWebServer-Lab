@@ -29,10 +29,10 @@ class SimpleApplicationContextTest {
         SimpleApplicationContext context = new SimpleApplicationContext();
         context.registerControllerClass(TestController.class);
 
-        Optional<String> response = context.executeGetRoute("/greeting", Map.of("name", "Seb"));
+        Optional<String> response = context.executeGetRoute("/greeting", Map.of("name", "Nicole"));
 
         assertTrue(response.isPresent());
-        assertEquals("Hola Seb", response.get());
+        assertEquals("Hola Nicole", response.get());
     }
 
     @RestController
