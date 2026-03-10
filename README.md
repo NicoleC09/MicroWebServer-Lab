@@ -78,10 +78,10 @@ The server serves files from `src/main/resources/public`.
 
 ## AWS Deployment Evidence
 
-![alt text](<WhatsApp Image 2026-03-09 at 10.04.17 PM.jpeg>)
+![alt text](<Image1.jpeg>)
 
-![alt text](<WhatsApp Image 2026-03-09 at 10.05.40 PM.jpeg>)
+![alt text](<Image2.jpeg>)
 
-![alt text](<WhatsApp Image 2026-03-09 at 10.05.40 PM-1.jpeg>)
+![alt text](<Image3.jpeg>)
 
 ---
